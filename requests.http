@@ -1,0 +1,35 @@
+@baseURL = http://localhost:5000/api/car
+
+###get cars : con esta ruta se puede obtener todos los carros de la base de datos
+get {{baseURL}}/cars
+
+### post car : con esta ruta se puede agregar un nuevo carro a la base de datos
+post {{baseURL}}/addCar
+Content-Type: application/json
+
+{
+  "placa": "SDF123",
+  "serie": "4234",
+  "modelo"  : "Corolla",
+  "state": "new",
+  "marca": "Toyota",
+  "kilometraje": "5000",
+  "tipo": "sedan"
+}
+
+### put car : con esta ruta se puede actualizar un carro de la base de datos
+put {{baseURL}}/updateCar/6404fb9a7afa7d072ef2fd82
+Content-Type: application/json
+
+{
+  "placa": "BIGBANG",
+  "serie": "99999",
+  "modelo"  : "CoroNa",
+  "state": "new",
+  "marca": "Toyota",
+  "kilometraje": "5000",
+  "tipo": "sedan"
+}
+
+### delete car : con esta ruta se puede eliminar un carro de la base de datos
+delete {{baseURL}}/updateCar/6404b5cc4c288c46603cca0a
